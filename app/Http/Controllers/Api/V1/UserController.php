@@ -223,4 +223,35 @@ class UserController extends Controller
        /* return $pdf->stream('inVoice_mail.pdf');
         return view('pdf.pdfView');*/
     }
+
+     public function preview(Request $request,$id)
+    {
+       
+        $items = DB::table("invoice")
+        ->join('company','company.id','=','invoice.customer_id')
+        ->where('invoice.invoice','=',$id)->get();
+        $data = DB::table("company_master")->where('status','=',1)->get();
+        view()->share('invoices',$items);
+        view()->share('data',$data);
+        $pdf = PDF::loadView('pdf.inVoice_mail');
+
+        
+        if($request->has('download')){
+            $pdf = PDF::loadView('pdf.inVoice_mail');
+            return $pdf->download('inVoice_mail.pdf');
+        }
+        return $pdf->stream('inVoice_mail.pdf');
+        return view('pdf.inVoice_mail');
+       
+
+      
+        
+        
+        /*if($request->has('download')){
+            $pdf = PDF::loadView('pdf.pdfView');
+            return $pdf->download('pdfView.pdf');
+        }*/
+       /* return $pdf->stream('inVoice_mail.pdf');
+        return view('pdf.pdfView');*/
+    }
 }

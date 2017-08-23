@@ -29,7 +29,7 @@ function calcTax(amount){
 	$('#h_Sub_amount').val(amount);
 	$('#Sub_amount').text(amount);
 	var placeoforder = $('#place_of_supply').val();
-	if(placeoforder == "Maharashtra"){
+	if(placeoforder == "Delhi"){
 		var cgst = 9;
 	    var CGST_Amount = Math.round(amount*(cgst/100));
 
@@ -102,7 +102,7 @@ function EditcalcTax(amount){
 	$('#sub_total').val(amount);
 	
 	var placeoforder = $('#place_of_supply').val();
-	if(placeoforder == "Maharashtra"){
+	if(placeoforder == "Delhi"){
 		var cgst = 9;
 	    var CGST_Amount = Math.round(amount*(cgst/100));
 
@@ -388,5 +388,34 @@ function logout(){
      $.removeCookie("tokenId");
      $.removeCookie("tokenUsername");
      window.location.href = "/login";
+}
+
+function previewInvoice(id){
+ 	
+ 	$.ajax({
+		
+		"url":"/api/previewInvoice/"+id,
+		"method":"GET",
+		
+		
+		"dataType":"JSON",
+		beforeSend:function(){
+			$('.bodyLoaderWithOverlay').show();
+		},
+		success:function(response){
+			
+			
+			if(response.code == 200){
+				alert(response.message);
+				 window.location.href = "/viewInvoice";
+			}else{
+				alert(response.message);
+			}
+		},
+		complete:function(){
+			$('.bodyLoaderWithOverlay').hide();
+		
+		}
+	});
 }
 

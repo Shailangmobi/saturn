@@ -66,13 +66,16 @@
                                     <td>{{$value->status}}</td>
                                     <td class="footable-visible footable-last-column">
                                         <div class="btn-group">
-                                            <a class='btn btn-sm btn-info' target="_BLANK"data-toggle='modal' href="pdfview/{{$value->invoice}}">Print Invoice</a>
+                                            <a class='btn btn-xs btn-info' target="_BLANK" data-toggle='modal' href="pdfview/{{$value->invoice}}">Print Invoice</a>
                                         </div>
                                          <div class="btn-group">
-                                            <a class='btn btn-sm btn-success' data-toggle='modal' href="edit/{{$value->invoice}}">Edit Invoice</a>
+                                            <a class='btn btn-xs btn-success' data-toggle='modal' href="edit/{{$value->invoice}}">Edit Invoice</a>
                                         </div><br>
                                          <div class="btn-group">
-                                            <a class='btn btn-sm btn-info' data-toggle='modal' onclick="mailInvoice('{{$value->invoice}}');">Mail Invoice</a>
+                                            <a class='btn btn-xs btn-primary' data-toggle='modal' onclick="mailInvoice('{{$value->invoice}}');">Mail Invoice</a>
+                                        </div>
+                                         <div class="btn-group">
+                                            <a class='btn btn-xs btn-success' target="_BLANK" data-toggle='modal' href="preview/{{$value->invoice}}" >Preview pdf</a>
                                         </div>
                                     </td>
                                 </tr>

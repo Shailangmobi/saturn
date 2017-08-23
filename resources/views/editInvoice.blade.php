@@ -88,7 +88,7 @@
         <td id="table_td">Place of Supply:
         <input  readonly="" class = "form-control"  id="place_of_supply" name="place_of_supply" value="{{$data[0]->place_of_supply}}">
         </td>
-		<td id="table_td"><strong>GSTIN</strong>: 27AAHC1232C1ZZ<br></td>
+		<td id="table_td"><strong>GSTIN</strong>: {{$company[0]->gistin}}<br></td>
 		</tr>
 
 		

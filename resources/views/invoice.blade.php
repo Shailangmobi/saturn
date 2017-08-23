@@ -97,7 +97,7 @@
         <td id="table_td">Place of Supply:
         <select class="form-control" id="place_of_supply" name="place_of_supply" onchange="placeOfSup(this.value);">
        
-        <option value="Maharashtra">Maharashtra</option>
+        <option value="Delhi">Delhi</option>
          <option value="Ot">Others</option>
         </select></td>
 		<td id="table_td"><strong>GSTIN</strong>:{{$data2[0]->gistin}}<br></td>
