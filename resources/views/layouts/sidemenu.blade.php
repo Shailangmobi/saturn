@@ -10,11 +10,9 @@
 
                 <div class="dropdown">
                     <a class="dropdown-toggle" href="#" data-toggle="dropdown">
-                        <small class="text-muted">A product of Saturn Promoters<b class="caret"></b></small>
+                        <small class="text-muted"> Saturn Promoters Invoicing Panel</small>
                     </a>
-                    <ul class="dropdown-menu animated fadeInRight m-t-xs">
-                     
-                    </ul>
+                    
                 </div>
 
 
