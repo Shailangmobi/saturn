@@ -12,6 +12,7 @@
         
     } 
 </script>
+
 <!-- Main Wrapper -->
 <div id="wrapper">
 
@@ -41,7 +42,7 @@
 							          
 							            <div class="hpanel">
 							                <div class="panel-body">
-							                @if(isset($data))
+							                @if(sizeof($data) != 0 )
 							                        <form action="#" id="profile">
 							                            <div class="row">
 							                            <div class="form-group col-lg-12">

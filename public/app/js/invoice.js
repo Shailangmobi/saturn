@@ -30,10 +30,10 @@ function calcTax(amount){
 	$('#Sub_amount').text(amount);
 	var placeoforder = $('#place_of_supply').val();
 	if(placeoforder == "Maharashtra"){
-		var cgst = 9/2;
+		var cgst = 9;
 	    var CGST_Amount = Math.round(amount*(cgst/100));
 
-	    var sgst = 9/2;
+	    var sgst = 9;
 	  	var SGST_Amount = Math.round(amount*(sgst/100));
 		$('#cgst').text(CGST_Amount);
 		$('#sgst').text(CGST_Amount);
@@ -53,7 +53,7 @@ function calcTax(amount){
 		$('#sgst').text("");
 		$('#h_cgst').val("");
 		$('#h_sgst').val("");
-		var igst = 18/2;
+		var igst = 18;
 		var IGST_Amount = amount*(igst/100);
 		var igst = IGST_Amount;
 		$('#h_total_tax').val(igst);
@@ -103,10 +103,10 @@ function EditcalcTax(amount){
 	
 	var placeoforder = $('#place_of_supply').val();
 	if(placeoforder == "Maharashtra"){
-		var cgst = 9/2;
+		var cgst = 9;
 	    var CGST_Amount = Math.round(amount*(cgst/100));
 
-	    var sgst = 9/2;
+	    var sgst = 9;
 	  	var SGST_Amount = Math.round(amount*(sgst/100));
 		$('#cgst').val(CGST_Amount);
 		$('#sgst').val(SGST_Amount);
@@ -122,7 +122,7 @@ function EditcalcTax(amount){
 		$('#cgst').val(0);
 		$('#sgst').val(0);
 		
-		var igst = 18/2;
+		var igst = 18;
 		var IGST_Amount = amount*(igst/100);
 		var igst = IGST_Amount;
 		
@@ -293,7 +293,7 @@ function getCompanyDetails(){
 
 function editInvoice(){
 	var data = $('#invoiceForm').serialize();
-	alert(data);
+	
 	
 	$.ajax({
 		

@@ -56,9 +56,9 @@
         <div class="search2">
             <form>
                 <i class="fa fa-search"></i>
-                <input type="text" id="search_box" value="Search By Name or Mobile Number" placeholder="Search By Name or Mobile Number" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search By Name or Mobile Number';}"/>
+                <input style="width: 22%;" type="text" id="search_box" value="Search By Name or Mobile Number" placeholder="Search By Name or Mobile Number" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search By Name or Mobile Number';}"/><br>
             </form>
-        </div>
+        </div><br>
         <td id="headtxt">INVOICE</td>
         </tr>
         </table>
@@ -76,7 +76,6 @@
 				</td>
 
 				<td id="table_td" >Invoice no:-<input readonly="" class="form-control" readonly="" id="invoice" name="invoice" value="Invoice No {{$data[0]->count}}"></td>
-
 				<td id="table_td" rowspan="2" ><strong>{{$data2[0]->company_name}}</strong><br>
 				Address :{{$data2[0]->company_address}}<br>
 				Email :  {{$data2[0]->email}}<br>
@@ -101,7 +100,7 @@
         <option value="Maharashtra">Maharashtra</option>
          <option value="Ot">Others</option>
         </select></td>
-		<td id="table_td"><strong>GSTIN</strong>: 27AAHC1232C1ZZ<br></td>
+		<td id="table_td"><strong>GSTIN</strong>:{{$data2[0]->gistin}}<br></td>
 		</tr>
      
 		</table>
@@ -134,7 +133,7 @@
 		</td>
 
         <td id="table_td" style="vertical-align:top;">
-        	<span style="visibility: visible;">998413</span><br>
+        	<span style="visibility: visible;">{{$product[0]->product_sac}}</span><br>
         	
 	        </span>
         </td>
@@ -195,24 +194,15 @@
 		</tr>
 		<tr>
 		<td colspan="3" id="table_td" align="left">
-		<strong>Company Name:</strong><span>Mobisoft Technology India Pvt Ltd.</span><br>
-		<strong>Bank Name:</strong><span>ICICI Bank</span><br>
-		<strong>Account No:</strong><span>015105012883</span><br>
-		<strong>RTGS/NEFT/IFSC/CODE:</strong><span>ICIC0000151</span>
+		<strong>Company Name:</strong><span>{{$data2[0]->company_name}}</span><br>
+		<strong>Bank Name:</strong><span>{{$data2[0]->bank_name}}</span><br>
+		<strong>Account No:</strong><span>{{$data2[0]->account_no}}</span><br>
+		<strong>IFSC/CODE:</strong><span>{{$data2[0]->ifsc_code}}</span>
 		</td>
-		<td rowspan="2"><center><b>For Mobisoft Technology India Pvt Ltd<br><br><br><br><br><br>Authorized Signature</b></center>
+		<td rowspan="2"><center><b>For {{$data2[0]->company_name}}<br><br><br><br><br><br>Authorized Signature</b></center>
 		</td>
 		</tr>
-		<tr>
-		<td colspan="3" id="table_td" align="left">
-		<strong>Company Name:</strong><span>Mobisoft Technology India Pvt Ltd.</span><br>
-		<strong>Bank Name:</strong><span>Central Bank of India Details</span><br>
-		<strong>Account No:</strong><span>3497063665</span><br>
-		<strong>RTGS/NEFT/IFSC/CODE:</strong><span>CBIN0283154</span>
-		</td>
-
-		</tr>
-
+		
 		</table>
 
 

@@ -189,22 +189,14 @@
 		</tr>
 		<tr>
 		<td colspan="3" id="table_td" align="left">
-		<strong>Company Name:</strong><span>Mobisoft Technology India Pvt Ltd.</span><br>
-		<strong>Bank Name:</strong><span>ICICI Bank</span><br>
-		<strong>Account No:</strong><span>015105012883</span><br>
-		<strong>RTGS/NEFT/IFSC/CODE:</strong><span>ICIC0000151</span>
+		<strong>Company Name:</strong><span>Saturn Promoters</span><br>
+		<strong>Bank Name:</strong><span>Axis Bank Ltd</span><br>
+		<strong>Account No:</strong><span>913020013009617</span><br>
+		<strong>IFSC/CODE:</strong><span>UTIB0001600 </span>
 		</td>
 		<td rowspan="2"></td>
 		</tr>
-		<tr>
-		<td colspan="3" id="table_td" align="left">
-		<strong>Company Name:</strong><span>Mobisoft Technology India Pvt Ltd.</span><br>
-		<strong>Bank Name:</strong><span>Central Bank of India Details</span><br>
-		<strong>Account No:</strong><span>3497063665</span><br>
-		<strong>RTGS/NEFT/IFSC/CODE:</strong><span>CBIN0283154</span>
-		</td>
-
-		</tr>
+		
 
 		</table>
 

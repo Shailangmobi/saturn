@@ -70,7 +70,7 @@
                                         </div>
                                          <div class="btn-group">
                                             <a class='btn btn-sm btn-success' data-toggle='modal' href="edit/{{$value->invoice}}">Edit Invoice</a>
-                                        </div>
+                                        </div><br>
                                          <div class="btn-group">
                                             <a class='btn btn-sm btn-info' data-toggle='modal' onclick="mailInvoice('{{$value->invoice}}');">Mail Invoice</a>
                                         </div>
@@ -83,7 +83,7 @@
                     </div>
                     <div class="panel-footer">
                     <span class="pull-right">
-                          PDF GENERATE
+                          Print, Mail and Edit Invoice Panel
                     </span>
                         Invoice Details
                     </div>

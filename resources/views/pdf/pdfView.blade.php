@@ -175,22 +175,14 @@
 		</tr>
 		<tr>
 		<td colspan="3" id="table_td" align="left">
-		<strong>Company Name:</strong><span>Mobisoft Technology India Pvt Ltd.</span><br>
-		<strong>Bank Name:</strong><span>ICICI Bank</span><br>
-		<strong>Account No:</strong><span>015105012883</span><br>
-		<strong>IFSC/CODE:</strong><span>ICIC0000151</span>
+		<strong>Company Name:</strong><span>{{$data[0]->company_name}}.</span><br>
+		<strong>Bank Name:</strong><span>{{$data[0]->bank_name}}</span><br>
+		<strong>Account No:</strong><span>{{$data[0]->account_no}}</span><br>
+		<strong>IFSC/CODE:</strong><span>{{$data[0]->ifsc_code}}</span>
 		</td><br>
-		<td id="table_td" rowspan="2"><center><b>For Mobisoft Technology India Pvt Ltd<br><br><br><br><br><br>Authorized Signature</b></center></td>
+		<td id="table_td" rowspan="1"><center><b>For {{$data[0]->company_name}}<br><br><br><br><br><br>Authorized Signature</b></center></td>
 		</tr>
 
-		<tr>
-		<td colspan="3" id="table_td" align="left">
-		<strong>Company Name : </strong><span>Mobisoft Technology India Pvt Ltd.</span><br>
-		<strong>Bank Name    : </strong><span>Central Bank of India Details</span><br>
-		<strong>Account No   : </strong><span>3497063665</span><br>
-		<strong>IFSC/CODE    : </strong><span>CBIN0283154</span>
-		</td>
-		</tr>
 
 		</table>
 		<center><p></p></center>

@@ -1,23 +1,19 @@
 <aside id="menu">
     <div id="navigation">
         <div class="profile-picture">
-            <a href="index-2.html">
-                <img src="images/profile.jpg" class="img-circle m-b" alt="logo">
+            <a href="#">
+               
             </a>
 
             <div class="stats-label text-color">
-                <span class="font-extra-bold font-uppercase">Mobisofttech Pvt Ltd</span>
+                <span class="font-extra-bold font-uppercase">Saturn Promoters</span>
 
                 <div class="dropdown">
                     <a class="dropdown-toggle" href="#" data-toggle="dropdown">
-                        <small class="text-muted">A product of Mobisofttech Pvt Ltd<b class="caret"></b></small>
+                        <small class="text-muted">A product of Saturn Promoters<b class="caret"></b></small>
                     </a>
                     <ul class="dropdown-menu animated fadeInRight m-t-xs">
-                       <!--  <li><a href="contacts.html">Contacts</a></li>
-                        <li><a href="profile.html">Profile</a></li>
-                        <li><a href="analytics.html">Analytics</a></li>
-                        <li class="divider"></li>
-                        <li><a href="login.html">Logout</a></li> -->
+                     
                     </ul>
                 </div>
 

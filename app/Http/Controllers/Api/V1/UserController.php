@@ -194,8 +194,8 @@ class UserController extends Controller
              Mail::send('pdf.mail', ['data' => $Customer], function($message) use ($Customer)
             {
                 $pdf = PDF::loadView('pdf.inVoice_mail');
-                $message->subject('Mobisoft Tech Pvt Ltd Product Invoice');
-                $message->from('no-reply@mobisofttech.co.in', 'Mobisoft Tech Pvt Ltd!');
+                $message->subject('Saturn Promoters Products Invoice');
+                $message->from('no-reply@mobisofttech.co.in', 'Saturn Promoters');
                 $message->to($Customer[0]->email);
                 $message->attachData($pdf->output(),'inVoice_mail.pdf');
             });

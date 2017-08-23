@@ -298,8 +298,8 @@ class Invoice extends Model
     public static function editInvoice($data){
     	$insertData['gstin'] = $data['gstin'];
         $insertData['name'] = $data['name'];
-       	$insertData['amount'] = $data['amount2'];
-		$insertData['product'] = $data['product2'];
+       	$insertData['amount'] = $data['amount1'];
+		$insertData['product'] = $data['product1'];
         $insertData['company_name'] = $data['company_name'];
 		$insertData['address'] = $data['address'];
 		$insertData['invoice'] = $data['invoice'];

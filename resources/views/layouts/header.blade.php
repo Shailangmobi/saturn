@@ -9,11 +9,11 @@
     <nav role="navigation">
         <div class="header-link hide-menu"><i class="fa fa-bars"></i></div>
         <div class="small-logo">
-            <span class="text-primary">HOMER APP</span>
+          
         </div>
         <form role="search" class="navbar-form-custom" method="post" action="#">
             <div class="form-group">
-                <input type="text" placeholder="Search something special" class="form-control" name="search">
+                
             </div>
         </form>
         <div class="mobile-menu">

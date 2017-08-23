@@ -41,7 +41,7 @@
                         <h1 class="m-xs">{{$data}}</h1>
 
                         <h3 class="font-extra-bold no-margins text-success">
-                            Invoice Id Created
+                            Invoice Ids Created
                         </h3>
                         <small>All Created Invoices Id Count</small>
                     </div>
