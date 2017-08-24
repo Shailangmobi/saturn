@@ -13,6 +13,7 @@ use Session;
 use View;
 use DB;
 use PDF;
+use Excel;
 
 class UserController extends Controller
 {
@@ -41,6 +42,7 @@ class UserController extends Controller
             }else{
                 return back()->with('msg_notok',"Failed! Wrong Excel file Extension");
             } 
+
             if($data->count()){
                 foreach ($data as $key => $value) {
                     $arr[] = ['name' => $value->name,

@@ -105,7 +105,7 @@
   <span class="close1" onclick="document.getElementById('myModal').style.display='none'">&times;</span>
 
   <!-- Modal Content (The Image) -->
-  <img class="modal-content" id="img01" src="{{URL::asset('images/Capture.png')}}">
+  <img class="modal-content" id="img01" src="{{URL::asset('images/Capture.PNG')}}">
 
   <!-- Modal Caption (Image Text) -->
   <div id="caption"></div>
