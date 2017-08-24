@@ -25,6 +25,7 @@ Route::get('/dashboard', [
 	    'as' => '/dashboard', 'uses' => 'InvoicController@getDashBoardCount'
 ]);
 
+Route::post('import-csv-excel',array('as'=>'import-csv-excel','uses'=>'Api\V1\UserController@importFileIntoDB'));
 /*Route::get('/addCompanyProfile', function () {
 return view('addProfile');
 });*/
