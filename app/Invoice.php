@@ -146,7 +146,7 @@ class Invoice extends Model
         $insertData['company_name'] = $data['company'];
 		$insertData['address'] = $data['address'];
 		$insertData['invoice'] = $data['invoice'];
-		
+		$insertData['quantity'] = $data['quantity1'];
 		$insertData['amount'] = $data['amount1'];
 		$insertData['product'] = $data['product1'];
 		$insertData['place_of_supply'] = $data['place_of_supply'];
@@ -168,26 +168,28 @@ class Invoice extends Model
 				/*return $$data['amount1'];*/
 				$insertData['amount'] = $data['amount2'];
 				$insertData['product'] = $data['product2'];
-				
+				$insertData['quantity'] = $data['quantity2'];
 				
 				$insertDetails = DB::table('invoice')->insert($insertData);
 			}
 			if ($data['amount3'] != 0 && $data['product3'] != "") {
 				$insertData['product'] = $data['product3'];
 				$insertData['amount'] = $data['amount3'];
+				$insertData['quantity'] = $data['quantity3'];
 				
 				$insertDetails = DB::table('invoice')->insert($insertData);
 			}
 			if ($data['amount4'] != 0 && $data['product4'] != "") {
 				$insertData['product'] = $data['product4'];
 				$insertData['amount'] = $data['amount4'];
+				$insertData['quantity'] = $data['quantity4'];
 				
 				$insertDetails = DB::table('invoice')->insert($insertData);
 			}
 			if ($data['amount5'] != 0  && $data['product5'] != "") {
 				$insertData['product'] = $data['product5'];
 				$insertData['amount'] = $data['amount5'];
-				
+				$insertData['quantity'] = $data['quantity5'];
 				$insertDetails = DB::table('invoice')->insert($insertData);
 			}
 			
@@ -318,26 +320,31 @@ class Invoice extends Model
 			if($data['amount1'] != 0 || $data['amount1'] != "" || $data['amount1'] != null){
 				$insertData['amount'] = $data['amount1'];
 				$insertData['product'] = $data['product1'];
+				$insertData['quantity'] = $data['quantity1'];
 				$insertDetails = DB::table('invoice')->insert($insertData);
 			}
 			if($data['amount2'] != 0 || $data['amount2'] != "" || $data['amount2'] != null) {
 				$insertData['amount'] = $data['amount2'];
 				$insertData['product'] = $data['product2'];
+				$insertData['quantity'] = $data['quantity2'];
 				$insertDetails = DB::table('invoice')->insert($insertData);
 			}
 			if ($data['amount3'] != 0 || $data['amount3'] != "" || $data['amount3'] != null) {
 				$insertData['product'] = $data['product3'];
 				$insertData['amount'] = $data['amount3'];
+				$insertData['quantity'] = $data['quantity3'];
 				$insertDetails = DB::table('invoice')->insert($insertData);
 			}
 			if ($data['amount4'] != 0 || $data['amount4'] != "" || $data['amount4'] != null) {
 				$insertData['product'] = $data['product4'];
 				$insertData['amount'] = $data['amount4'];
+				$insertData['quantity'] = $data['quantity4'];
 				$insertDetails = DB::table('invoice')->insert($insertData);
 			}
 			if ($data['amount5'] != 0 || $data['amount5'] != "" || $data['amount5'] != null) {
 				$insertData['product'] = $data['product5'];
 				$insertData['amount'] = $data['amount5'];
+				$insertData['quantity'] = $data['quantity5'];
 				$insertDetails = DB::table('invoice')->insert($insertData);
 			}
 			if(sizeof($insertDetails) > 0 ){

@@ -1,0 +1,5 @@
+name,email,company_name,company_state,company_address,phone,cin,gistin,status
+XTZ,example@gmail.com,companyX,State1,ADDRESS1,1234567890,123Ad,ADDA213,1
+ZZZ,example@gmail.com,companyY,State2,ADDRESS15,1234567890,123Ad,ADDA214,1
+ABC,example@gmail.com,companyZ,State3,ADDRESS2,1234567890,123Ad,ADDA215,1
+ccc,example@gmail.com,companyA,State4,ADDRESS3,1234567890,123Ad,ADDA216,1

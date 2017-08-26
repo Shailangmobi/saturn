@@ -150,6 +150,11 @@ function submitInvoice(){
 	    	alert('Please enter amount');
 	    	return false;
 	    }
+	    var amount_check = $('.quantity'+checkClass).val();
+	    if( amount_check == '' || amount_check == 0 ){
+	    	alert('Please enter quantity');
+	    	return false;
+	    }
 	});
 
 	if(checkSelect == ''){
@@ -325,27 +330,32 @@ function editInvoice(){
 function displayAmount(){
  	if(!$('#product1').val() == ""){
 		$('#amount1').css('visibility','visible');
+	   	$('#quantity1').css('visibility','visible');
 	   
 	   
 	}
 	
 	if(!$('#product2').val() == ""){
 		$('#amount2').css('visibility','visible');
+	   	$('#quantity2').css('visibility','visible');
 	   
 	   
 	}
 	if(!$('#product3').val() == ""){
 		$('#amount3').css('visibility','visible');
+	   	$('#quantity3').css('visibility','visible');
 	   
 	   
 	}
 	if(!$('#product4').val() == ""){
 		$('#amount4').css('visibility','visible');
+	   	$('#quantity4').css('visibility','visible');
 	   
 	   
 	}
 	if(!$('#product5').val() == ""){
 		$('#amount5').css('visibility','visible');
+	   	$('#quantity5').css('visibility','visible');
 	   
 	   
 	}

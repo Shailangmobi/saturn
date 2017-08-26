@@ -87,7 +87,7 @@
 		<td id="table_td" >Sr. No.</td>
 		<td id="table_td">Description</td>
         <td id="table_td">SAC Code</td>
-		
+		<td id="table_td">Quantity</td>
 		<td id="table_td">Amount</td>
 		</tr>
 
@@ -108,7 +108,14 @@
         	
 	        </span>
         </td>
-        	<td id="table_td" >
+        <td id="table_td">
+		@php ($i = 1)
+		@foreach($invoices as $quantity)
+			{{$quantity->quantity}}<br>
+		@php ($i++)
+		@endforeach
+		</td>
+        <td id="table_td" >
 		@foreach ($invoices as $amount)
 			{{$amount->amount}}<br>
 		@endforeach
@@ -120,14 +127,14 @@
 		<tr>
        <td id="table_td" rowspan="5" ></td>
         
-		<td id="table_td" colspan="2" style="text-align:right">Sub total</td>
+		<td id="table_td" colspan="3" style="text-align:right">Sub total</td>
 		<td id="table_td"><span >{{$invoices[0]->sub_total}}</span></td>
 		</tr>
         
         <tr>
        
         
-		<td id="table_td" colspan="2" style="text-align:right">
+		<td id="table_td" colspan="3" style="text-align:right">
 		CGST : 9%<br>
         SGST : 9%<br>
         IGST : 18%
@@ -158,14 +165,14 @@
 		<tr>
         
         
-		<td id="table_td" colspan="2" style="text-align:right">GST TAX Total</td>
+		<td id="table_td" colspan="3" style="text-align:right">GST TAX Total</td>
 		<td id="table_td" ><span id="total_tax" name="total_tax">{{$invoices[0]->total_tax}}</span></td>
 		</tr>
 		
         <tr>
         
         
-		<td id="table_td" colspan="2" style="text-align:right">Total Amount</td>
+		<td id="table_td" colspan="3" style="text-align:right">Total Amount</td>
 		<td id="table_td">
 		<span id="total_amount" name="total_amount">{{$invoices[0]->total_amount}}</span>
 		</td>
@@ -174,7 +181,7 @@
 		<td colspan="4" id="table_td" align="left"> Rupees: <?php echo convert_number($invoices[0]->total_amount);?></td>
 		</tr>
 		<tr>
-		<td colspan="3" id="table_td" align="left">
+		<td colspan="4" id="table_td" align="left">
 		<strong>Company Name:</strong><span>{{$data[0]->company_name}}.</span><br>
 		<strong>Bank Name:</strong><span>{{$data[0]->bank_name}}</span><br>
 		<strong>Account No:</strong><span>{{$data[0]->account_no}}</span><br>
@@ -192,7 +199,7 @@
 		</html>
 <?php 
 
-function convert_number($number) 
+function convert_number1($number) 
 { 
     if (($number < 0) || ($number > 999999999)) 
     { 
@@ -269,4 +276,37 @@ function convert_number($number)
 
     return $res; 
 } 
+
+function convert_number($number)
+{
+    $decimal = round($number - ($no = floor($number)), 2) * 100;
+    $hundred = null;
+    $digits_length = strlen($no);
+    $i = 0;
+    $str = array();
+    $words = array(0 => '', 1 => 'one', 2 => 'two',
+        3 => 'three', 4 => 'four', 5 => 'five', 6 => 'six',
+        7 => 'seven', 8 => 'eight', 9 => 'nine',
+        10 => 'ten', 11 => 'eleven', 12 => 'twelve',
+        13 => 'thirteen', 14 => 'fourteen', 15 => 'fifteen',
+        16 => 'sixteen', 17 => 'seventeen', 18 => 'eighteen',
+        19 => 'nineteen', 20 => 'twenty', 30 => 'thirty',
+        40 => 'forty', 50 => 'fifty', 60 => 'sixty',
+        70 => 'seventy', 80 => 'eighty', 90 => 'ninety');
+    $digits = array('', 'hundred','thousand','lakh', 'crore');
+    while( $i < $digits_length ) {
+        $divider = ($i == 2) ? 10 : 100;
+        $number = floor($no % $divider);
+        $no = floor($no / $divider);
+        $i += $divider == 10 ? 1 : 2;
+        if ($number) {
+            $plural = (($counter = count($str)) && $number > 9) ? 's' : null;
+            $hundred = ($counter == 1 && $str[0]) ? ' and ' : null;
+            $str [] = ($number < 21) ? $words[$number].' '. $digits[$counter]. $plural.' '.$hundred:$words[floor($number / 10) * 10].' '.$words[$number % 10]. ' '.$digits[$counter].$plural.' '.$hundred;
+        } else $str[] = null;
+    }
+    $Rupees = implode('', array_reverse($str));
+    $paise = ($decimal) ? "." . ($words[$decimal / 10] . " " . $words[$decimal % 10]) . ' Paise' : '';
+    return ($Rupees ? $Rupees . 'Rupees ' : '') . $paise;
+}
 ?>		
